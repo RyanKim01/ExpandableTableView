@@ -76,29 +76,34 @@ extension ViewController2: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         // this needs to be updated to work with DocumentCell and DocumentPartCell
-        let defaultCell = tableView.cellForRowAtIndexPath(indexPath)
-        let documentCell = tableView.cellForRowAtIndexPath(indexPath) as! DocumentCell!
-    
-//        let documentPartCell = tableView.cellForRowAtIndexPath(indexPath) as! DocumentPartCell
-        if defaultCell == documentCell {
+        if documentsAndDocumentParts[indexPath.section][indexPath.row].dynamicType == Document.self {
+            let documentCell = tableView.cellForRowAtIndexPath(indexPath) as! DocumentCell
             documentCell.document!.isExpanded = !documentCell.document!.isExpanded
             
             updateDocumentsAndParts(indexPath.section)
+
+            let document =  documentsAndDocumentParts[indexPath.section][indexPath.row] as! Document
+            let numberOfParts = document.subdocuments.count
+           
             
-//            let numberOfParts = criteria[indexPath.section].documents[indexPath.row].subdocuments.count
-            let numberOfParts = documentsAndDocumentParts[indexPath.section].count
+            
             if documentCell.document!.isExpanded {
                 insertRows(indexPath.row + 1, y: indexPath.row + numberOfParts, section: indexPath.section)
             } else {
                 deleteRows(indexPath.row + 1, y: indexPath.row + numberOfParts, section: indexPath.section)
             }
+        } else if documentsAndDocumentParts[indexPath.section][indexPath.row].dynamicType == DocumentPart.self {
+            let documentPart = documentsAndDocumentParts[indexPath.section][indexPath.row] as! DocumentPart
+            print("\(documentPart.title)")
         }
-//        else if defaultCell == documentPartCell {
-//            print("haha")
-//        }
+
         
-      
+        
+   
     }
+}
+      
+
     
 //    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
 //        
@@ -110,7 +115,7 @@ extension ViewController2: UITableViewDelegate {
 //        let numberOfParts = criteria[indexPath.section].documents[indexPath.row].subdocuments.count
 //        deleteRows(indexPath.row + 1, y: indexPath.row + numberOfParts, section: indexPath.section)
 //    }
-}
+
 
 
 extension ViewController2: UITableViewDataSource {
