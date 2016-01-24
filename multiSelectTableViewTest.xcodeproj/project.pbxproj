@@ -22,6 +22,7 @@
 		2752B7411C505F7A00DABD83 /* DocumentPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2752B7401C505F7A00DABD83 /* DocumentPart.swift */; };
 		2752B7441C50930A00DABD83 /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2752B7431C50930A00DABD83 /* DocumentCell.swift */; };
 		2752B7461C50BD7300DABD83 /* DocumentPartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2752B7451C50BD7300DABD83 /* DocumentPartCell.swift */; };
+		2752B7481C5453C900DABD83 /* CustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2752B7471C5453C900DABD83 /* CustomHeaderCell.swift */; };
 		9EA6354E2DADCC4B9E19FC2A /* Pods_multiSelectTableViewTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59ECDA60C84FA410C899800 /* Pods_multiSelectTableViewTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		2752B7401C505F7A00DABD83 /* DocumentPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPart.swift; sourceTree = "<group>"; };
 		2752B7431C50930A00DABD83 /* DocumentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentCell.swift; sourceTree = "<group>"; };
 		2752B7451C50BD7300DABD83 /* DocumentPartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPartCell.swift; sourceTree = "<group>"; };
+		2752B7471C5453C900DABD83 /* CustomHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderCell.swift; sourceTree = "<group>"; };
 		9C21A5F916F5C71F7A011458 /* Pods-multiSelectTableViewTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-multiSelectTableViewTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-multiSelectTableViewTest/Pods-multiSelectTableViewTest.debug.xcconfig"; sourceTree = "<group>"; };
 		A4A59BFD42B08A6E215BDBB7 /* Pods-multiSelectTableViewTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-multiSelectTableViewTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-multiSelectTableViewTest/Pods-multiSelectTableViewTest.release.xcconfig"; sourceTree = "<group>"; };
 		E59ECDA60C84FA410C899800 /* Pods_multiSelectTableViewTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_multiSelectTableViewTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 				2752B70C1C4EC51000DABD83 /* Main.storyboard */,
 				2752B7451C50BD7300DABD83 /* DocumentPartCell.swift */,
 				2752B7431C50930A00DABD83 /* DocumentCell.swift */,
+				2752B7471C5453C900DABD83 /* CustomHeaderCell.swift */,
 				2752B7421C505F7E00DABD83 /* Models */,
 				2752B70F1C4EC51000DABD83 /* Assets.xcassets */,
 				2752B7111C4EC51000DABD83 /* LaunchScreen.storyboard */,
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2752B73D1C505F5E00DABD83 /* Criterion.swift in Sources */,
+				2752B7481C5453C900DABD83 /* CustomHeaderCell.swift in Sources */,
 				2752B7441C50930A00DABD83 /* DocumentCell.swift in Sources */,
 				2752B7411C505F7A00DABD83 /* DocumentPart.swift in Sources */,
 				2752B70B1C4EC51000DABD83 /* ViewController.swift in Sources */,

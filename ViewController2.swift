@@ -96,11 +96,58 @@ extension ViewController2: UITableViewDelegate {
             let documentPart = documentsAndDocumentParts[indexPath.section][indexPath.row] as! DocumentPart
             print("\(documentPart.title)")
         }
-
-        //
-        
-   
     }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let model = criteria[section]
+        
+        let headerView = UIView(frame: CGRectMake(0,0, tableView.frame.size.width, 60))
+        headerView.backgroundColor = UIColor.cyanColor()
+        headerView.layer.borderColor = UIColor.redColor().CGColor
+        headerView.layer.borderWidth = 1.0;
+        
+        let headerLabel = UILabel(frame: CGRectMake(5,2, tableView.frame.size.width - 5, 18))
+        headerLabel.text = model.title
+        headerLabel.textAlignment = NSTextAlignment.Center
+//        headerLabel.textColor = [UIColor whiteColor];
+//        headerLabel.font = [UIFont boldSystemFontOfSize:16.0];
+//        headerLabel.text = @"This is the custom header view";
+//        headerLabel.textAlignment = NSTextAlignmentLeft;
+//        
+        headerView.addSubview(headerLabel)
+        
+        return headerView
+        
+        
+        
+        
+        
+//        let  headerCell = tableView.dequeueReusableCellWithIdentifier("headerCell") as! CustomHeaderCell
+//         let model = criteria[section]
+//        
+//        switch(section) {
+//        case section:
+//            if let criterion = model as? Criterion {
+//                headerCell.criterion = criterion
+//            }
+//            break
+//        default:
+//            break
+//        }
+//       
+//        
+//        return headerCell
+    }
+    
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
+    }
+    
+    
+    
+    
+    
 }
       
 
@@ -124,9 +171,9 @@ extension ViewController2: UITableViewDataSource {
         return criteria.count
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return criteria[section].title
-    }
+//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return criteria[section].title
+//    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return documentsAndDocumentParts[section].count
